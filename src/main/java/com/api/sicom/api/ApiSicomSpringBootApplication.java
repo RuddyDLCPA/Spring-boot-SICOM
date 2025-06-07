@@ -9,5 +9,4 @@ public class ApiSicomSpringBootApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ApiSicomSpringBootApplication.class, args);
 	}
-
 }
