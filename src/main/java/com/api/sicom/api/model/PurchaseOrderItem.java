@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import org.hibernate.annotations.Fetch;
 
 import java.math.BigDecimal;
 
@@ -32,7 +31,7 @@ public class PurchaseOrderItem {
     @JoinColumn(name = "articuloId", referencedColumnName = "id")
     private Article article;
 
-    @ManyToOne(fetch = Fetch = FetchType.LAZY) // Un ítem de orden de compra tiene una unidad de medida
+    @ManyToOne(fetch = FetchType.LAZY) // Un ítem de orden de compra tiene una unidad de medida
     @JoinColumn(name = "unidadMedidaId", referencedColumnName = "id")
     private Unit unit;
 
