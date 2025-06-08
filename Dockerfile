@@ -10,7 +10,7 @@ FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 # Corregir el nombre del archivo JAR aquí
-COPY --from=build /app/target/globaline_logistic_api-1.0.0.jar app.jar
+COPY --from=build /app/target/api-sicom-spring-boot-1.0.0.jar app.jar
 
 # Exponer el puerto (ajusta según tu aplicación)
 EXPOSE 8080
