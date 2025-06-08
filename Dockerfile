@@ -1,12 +1,12 @@
 # Etapa de compilación - Usar una imagen con Java 17
-FROM maven:3.9-eclipse-temurin-17-alpine AS build
+FROM maven:3.5.0-eclipse-temurin-21-alpine AS build
 
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
 # Etapa de ejecución - Usar Java 17 también para la ejecución
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 # Corregir el nombre del archivo JAR aquí
